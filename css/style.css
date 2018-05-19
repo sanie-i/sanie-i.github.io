@@ -1,0 +1,298 @@
+@font-face { font-family: Suisse Regular; font-weight: bold; src: url('suisse-regular.woff');}
+@font-face { font-family: Apercu-Medium; font-weight: bold; src: url('ApercuPro-Medium.otf');}
+
+/* ----------------------------------------------- */
+/* navigation setup */
+.navigation{
+  background-color: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navigation a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 25px 46px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Suisse Regular, sans-serif;
+}
+
+.navigation button{
+  border: none;
+  background-color: inherit;
+  /* text-decoration: none; */
+  outline: none;
+  cursor: pointer;
+  float: right;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 25px 46px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Suisse Regular, sans-serif;
+}
+
+#close {
+  display: inline-block;
+  content: "\00d7"; /* This will render the 'X' */
+}
+
+.navigation button:first-child { float: left; }
+
+#white {
+  color: white;
+}
+
+#black {
+  color: black;
+}
+
+/* ----------------------------------------------- */
+
+#text{
+    width: 40%;
+}
+
+#visual{
+    width: 60%;
+    width: 60%;
+    float: left;
+    position: relative;
+    height: 100%;
+}
+
+/* #visual img{
+    width: 20%;
+} */
+
+#myDIV {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top: 20px;
+}
+
+/* ---------------------- */
+
+body,html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    font-family: Suisse Regular, sans-serif;
+    font-size: 16px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    padding: 0;
+    margin: 0;
+}
+ul,li,p {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+.wrapper {
+    height: 100%;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.wrapper .container {
+    height: 100%;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.slideshow {
+    height: 100%;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.slideshow .slideshow-left {
+    width: 40%;
+    float: left;
+    position: relative;
+    height: 100%;
+}
+.slideshow .slideshow-left .Lslide {
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.slideshow .Lslide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+.slideshow .Lslide-content h2 {
+    color: #000;
+    font-weight: 600;
+    font-size: 3em;
+    line-height: 1;
+}
+.slideshow .Lslide-content p {
+    color: #fff;
+    padding: 2.5em 0em;
+}
+.slideshow .Lslide-content .button {
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 25px;
+    position: relative;
+}
+.slideshow .Lslide-content .button i {
+    float: right;
+    position: absolute;
+    top: 50%;
+    right: 2.5em;
+    color: #000;
+    font-size: 9px;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transition: all 0.3s;
+}
+.slideshow .Lslide-content .button:hover i {
+    right: 1.7em;
+}
+.slideshow .Lslide-content .button p {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    text-align: left;
+    padding: 0.8em 8em 0.8em 1.5em;
+    font-size: 12px;
+    font-weight: 600;
+}
+.slideshow .slideshow-right {
+    width: 60%;
+    float: center;
+    position: relative;
+    height: 100%;
+}
+.slideshow .slideshow-right .Rslide {
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.slideshow .slideshow-right .Rslide img {
+    display: block;
+    /* min-height: 100%; */
+    /* min-width: 100%; */
+    margin: auto;
+    /* height: 100%; */
+    /* vertical-align: center; */
+    /* horizontal-align: center; */
+    /* transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%); */
+    /* max-width: 100%; */
+}
+
+#imgsize img {
+  min-height: 100%;
+  vertical-align: bottom;
+  /* display: block; */
+  /* min-height: 100%; */
+  /* min-width: 100%; */
+  /* margin: auto; */
+}
+
+#imgsize {
+  min-height: 100%;
+  vertical-align: bottom;
+  /* min-width: 10% */
+  /* display: block; */
+  /* margin: auto; */
+  /* min-height: 100%; */
+  /* min-width: 100%; */
+}
+
+.control {
+    position: absolute;
+    /* left: 40%;
+    top: 50%; */
+    width: 100%;
+    height: 100%;
+    /* transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%); */
+}
+.control i {
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    text-align: center;
+    position: absolute;
+    color: #aaaaaa;
+    transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+}
+.control .control-top {
+    width: 100%;
+    height: 50%;
+    /* width: 45px; */
+    /* height: 50px; */
+    /* background-color: #000; */
+    z-index: 5;
+    position: relative;
+    /* border-radius: 0px 4px 4px 0px; */
+    /* cursor: pointer; */
+}
+.control .control-top:hover i {
+    color: #333333;
+}
+.control .control-bottom {
+    width: 100%;
+    height: 50%;
+    /* width: 45px; */
+    /* height: 50px; */
+    /* background-color: #fff; */
+    z-index: 5;
+    position: relative;
+    /* border-radius: 4px 0px 0px 4px; */
+    /* left: -45px; */
+    /* cursor: pointer; */
+}
+.control .control-bottom:hover i {
+    color: #333333;
+}
