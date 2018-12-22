@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function() {
           lazyImage.srcset = lazyImage.dataset.srcset;
           lazyImage.classList.remove("lazy");
           lazyImageObserver.unobserve(lazyImage);
-          console.log("image loaded");
         }
       });
     });
