@@ -190,7 +190,7 @@ a:hover {
 /* ------------------------------------------------------------------------------- */
 .content {
   padding: 0;
-  overflow: hidden;
+  overflow-y: hidden;
   background-color: transparent;
   max-height: 0;
   -webkit-transition: max-height 0.3s ease-in-out;
@@ -241,7 +241,6 @@ a:hover {
   .text {
     padding: 0 2em .5em 2em;
     margin-top: 2rem;
-    height: auto;
 
     /* keeps it sticky */
     display: table;
@@ -326,7 +325,6 @@ a:hover {
   .text {
     padding: 0 2em .5em 2em;
     margin-top: 2rem;
-    height: auto;
 
     /* keeps it sticky */
     display: table;
