@@ -190,7 +190,7 @@ a:hover {
 /* ------------------------------------------------------------------------------- */
 .content {
   padding: 0;
-  overflow-y: hidden;
+  overflow: hidden;
   background-color: transparent;
   max-height: 0;
   -webkit-transition: max-height 0.3s ease-in-out;
@@ -281,7 +281,7 @@ a:hover {
 
     position: -webkit-sticky;
     position: sticky;
-    top: 2rem;
+    top: 5rem;
     z-index: 10;
   }
 
