@@ -51,8 +51,7 @@ button {
   padding: 0 0.5em 0 0;
 
   /* sticky */
-  /* position: -webkit-sticky; */
-  -webkit-position: sticky;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   background: #cccccc;
@@ -262,8 +261,7 @@ a:hover {
     line-height: 1;
     padding: 0.05em 0 0 0;
 
-    /* position: -webkit-sticky; */
-    -webkit-position: sticky;
+    position: -webkit-sticky;
 
     position: sticky;
     top: 0;
@@ -281,8 +279,7 @@ a:hover {
     line-height: 1;
     padding: 0;
 
-    /* position: -webkit-sticky; */
-    -webkit-position: sticky;
+    position: -webkit-sticky;
     position: sticky;
     top: 2rem;
     z-index: 10;
@@ -328,6 +325,7 @@ a:hover {
   .text {
     padding: 0 2em .5em 2em;
     margin-top: 2rem;
+    height: auto;
 
     /* keeps it sticky */
     display: table;
@@ -344,16 +342,14 @@ a:hover {
 
 /* TYPOGRAPHY */
   h4 {
-    /* position: -webkit-sticky; */
-    -webkit-position: sticky;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 10;
   }
 
   button {
-    /* position: -webkit-sticky; */
-    -webkit-position: sticky;
+    position: -webkit-sticky;
     position: sticky;
     top: 2rem;
     z-index: 10;
