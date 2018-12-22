@@ -1,5 +1,6 @@
 var coll = document.getElementsByClassName("collapsible");
 var i;
+var x = window.matchMedia("(max-width: 900px)")
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
@@ -20,15 +21,28 @@ $(document).ready(function(){
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('.image').animate({
-            scrollTop: $('.image').scrollTop() + target.offset().top
-          }, 800);
-          // //make smooth scroll image color
-          // var currentImg = jQuery(target).attr("id");
-          // document.getElementById(currentImg).style.filter = "grayscale(0%)";
-          // console.log(currentImg);
-          return false;
+
+        //if media is less than 900
+        if (x.matches) {
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: $('html, body').scrollTop() + target.offset().top
+            }, 800);
+            return false;
+          }
+        // if media is greater than 900
+        } else {
+          // TODO: fix this
+          if (target.length) {
+            $('.image').animate({
+              scrollTop: $('.image').scrollTop() + target.offset().top
+            }, 800);
+            // //make smooth scroll image color
+            // var currentImg = jQuery(target).attr("id");
+            // document.getElementById(currentImg).style.filter = "grayscale(0%)";
+            // console.log(currentImg);
+            return false;
+          }
         }
       }
     });
@@ -59,3 +73,14 @@ document.addEventListener("DOMContentLoaded", function() {
     // Possibly fall back to a more compatible method here
   }
 });
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    // document.body.style.backgroundColor = "yellow";
+  } else {
+   // document.body.style.backgroundColor = "pink";
+  }
+}
+
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
