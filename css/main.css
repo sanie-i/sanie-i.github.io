@@ -241,6 +241,7 @@ a:hover {
   .text {
     padding: 0 2em .5em 2em;
     margin-top: 2rem;
+    height: auto;
 
     /* keeps it sticky */
     display: table;
