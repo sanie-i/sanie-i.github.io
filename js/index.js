@@ -73,5 +73,3 @@ document.addEventListener("DOMContentLoaded", function() {
     // Possibly fall back to a more compatible method here
   }
 });
-
-x.addListener(myFunction) // Attach listener function on state changes
