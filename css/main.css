@@ -53,6 +53,7 @@ button {
   padding: 0 0.5em 0 0;
 
   /* sticky */
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   background: #cccccc;
@@ -110,6 +111,11 @@ a:hover {
   color: black;
 }
 
+::-moz-selection {
+  background: #146200;
+  color: black;
+}
+
 ::selection {
   background: #146200;
   color: black;
@@ -118,18 +124,23 @@ a:hover {
 /* LAYOUT */
 /* ------------------------------------------------------------------------------- */
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* holds the columns */
 .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100%;
 }
 
 /* two equal columns next to each other */
 .column {
-  flex: 50%;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
   overflow-y: scroll;
 }
 
@@ -150,13 +161,21 @@ a:hover {
   padding-bottom: 2em;
   border: none;
   outline: none;
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: -webkit-filter 0.2s ease-out;
+  transition: -webkit-filter 0.2s ease-out;
   transition: filter 0.2s ease-out;
+  transition: filter 0.2s ease-out, -webkit-filter 0.2s ease-out;
 }
 
 .image ul li img:hover {
-  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transition: -webkit-filter 0.2s ease-out;
+  transition: -webkit-filter 0.2s ease-out;
   transition: filter 0.2s ease-out;
+  transition: filter 0.2s ease-out, -webkit-filter 0.2s ease-out;
 }
 
 /* TOP MARGIN */
@@ -176,6 +195,7 @@ a:hover {
   overflow: hidden;
   background-color: transparent;
   max-height: 0;
+  -webkit-transition: max-height 0.3s ease-in-out;
   transition: max-height 0.3s ease-in-out;
 }
 
@@ -242,6 +262,8 @@ a:hover {
     font-size: 2em;
     line-height: 1;
     padding: 0.05em 0 0 0;
+
+    position: -webkit-sticky;
 
     position: sticky;
     top: 0;
@@ -319,6 +341,7 @@ a:hover {
 
 /* TYPOGRAPHY */
   h4 {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 10;
