@@ -274,7 +274,7 @@ a:hover {
     padding: 0;
   }
 
-  button {
+ul li > button {
     font-size: 2em;
     line-height: 1;
     padding: 0;
