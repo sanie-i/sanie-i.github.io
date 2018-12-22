@@ -281,6 +281,8 @@ a:hover {
     line-height: 1;
     padding: 0;
 
+    position: -webkit-sticky;
+    position: sticky;
     top: 2rem;
     z-index: 10;
   }
@@ -348,6 +350,8 @@ a:hover {
   }
 
   button {
+    position: -webkit-sticky;
+    position: sticky;
     top: 2rem;
     z-index: 10;
   }
