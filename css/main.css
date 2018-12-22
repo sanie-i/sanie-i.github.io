@@ -1,8 +1,6 @@
 @font-face { font-family: Founders Regular; src: url('data/FoundersGrotesk-Regular.woff2');}
 @font-face { font-family: Founders Regular-Italic; font-style: italic; src: url('data/FoundersGrotesk-RegularItalic.woff2');}
 
-/* TODO: cross browser prefixes */
-
 body {
   font-family: Founders Regular;
   font-weight: lighter;
