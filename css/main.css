@@ -1,8 +1,6 @@
 @font-face { font-family: Founders Regular; src: url('data/FoundersGrotesk-Regular.woff2');}
 @font-face { font-family: Founders Regular-Italic; font-style: italic; src: url('data/FoundersGrotesk-RegularItalic.woff2');}
 
-/* TODO: ease-in-out */
-
 body {
   font-family: Founders Regular;
   font-weight: lighter;
@@ -197,8 +195,8 @@ a:hover {
   background-color: transparent;
   max-height: 0;
   will-change: max-height;
-  -webkit-transition: max-height 0.5s ease-out;
-  transition: max-height 0.5s ease-out;
+  -webkit-transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
 }
 
 .content > p {
