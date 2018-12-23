@@ -51,9 +51,9 @@ button {
   padding: 0 0.5em 0 0;
 
   /* sticky */
-  position: -webkit-sticky;
+  /* position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 0; */
   background: #cccccc;
   min-width: 100%;
 
@@ -217,6 +217,11 @@ a:hover {
 
 .active, .collapsible:hover {
   color: #146200;
+}
+
+.collapsible {
+  position: sticky;
+  top: 0;
 }
 
 /* SCROLLBAR */
