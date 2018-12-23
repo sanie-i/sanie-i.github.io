@@ -196,6 +196,7 @@ a:hover {
   overflow: hidden;
   background-color: transparent;
   max-height: 0;
+  will-change: max-height;
   -webkit-transition: max-height 0.5s ease-out;
   transition: max-height 0.5s ease-out;
 }
