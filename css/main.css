@@ -200,6 +200,16 @@ ol {
   display: none;
 }
 
+/* BIBLIOGRAPHY */
+.content > p.bib {
+  padding: 0 3em .5em 1em;
+  text-indent: -1em;
+}
+
+.content > p.bib:first-child {
+  padding: 1em 3em .5em 1em;
+}
+
 /* LAYOUT */
 /* ------------------------------------------------------------------------------- */
 * {
@@ -406,6 +416,16 @@ ol {
     /* background-color: #e3e3e3; */
     width: 100%;
   }
+
+/* BIBLIOGRAPHY */
+  .content > p.bib {
+    padding: 0 0 1em 0;
+    text-indent: 0;
+  }
+
+  .content > p.bib:first-child {
+    padding: 1em 0;
+  }
 }
 
 /* ---------------------------------------------------------------------------------------------------- */
@@ -488,8 +508,19 @@ ol {
 
   #footnote-wrapper {
     background-color: #146200;
+    background-color: #008000;
     /* background-color: #e3e3e3; */
     width: 100%;
+  }
+
+/* BIBLIOGRAPHY */
+  .content > p.bib {
+    padding: 0 0 1em 0;
+    text-indent: 0;
+  }
+
+  .content > p.bib:first-child {
+    padding: 1em 0;
   }
 }
 
