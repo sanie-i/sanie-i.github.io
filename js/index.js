@@ -14,6 +14,39 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
+//footnotes
+var sup = document.getElementsByClassName("sup");
+var wrapper = document.getElementById('footnote-wrapper');
+var s;
+
+//footnotes in body text
+for (s = 0; s < sup.length; s++) {
+  // on nouseover
+  sup[s].addEventListener("mouseover", function() {
+    //insert text of current footnote:
+    var footnote = document.getElementById(this.hash.slice(1)).innerHTML;
+    console.log(footnote);
+    document.getElementById("footnote-show").innerHTML = footnote;
+
+    //open footnote wrapper:
+    if (wrapper.style.maxHeight) {
+      wrapper.style.maxHeight = "50vh";
+    } else {
+      wrapper.style.maxHeight = "50vh";
+    }
+  });
+  //on mouse out
+  sup[s].addEventListener("mouseout", function() {
+    if (wrapper.style.maxHeight) {
+      wrapper.style.maxHeight = null;
+    } else {
+      wrapper.style.maxHeight = null;
+    }
+
+  });
+
+}
+
 //smooth scrolls to figure
 $(document).ready(function(){
     $(function() {
