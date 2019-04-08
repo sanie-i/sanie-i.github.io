@@ -136,6 +136,21 @@ $('#coor4').on('click', function() {
   initMap();
 });
 
+$('#coor5').on('click', function() {
+  uluru = {lat: 44.929333, lng: 34.070250};
+  initMap();
+});
+
+$('#coor6').on('click', function() {
+  uluru = {lat: 44.984336, lng: 34.106102};
+  initMap();
+});
+
+// $('#coor7').on('click', function() {
+//   uluru = {lat: 44.929333, lng: 34.070250};
+//   initMap();
+// });
+
 // highlight chosen coordinates
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
