@@ -327,6 +327,7 @@ ____||____
             </p>
             <p>
             The project is made possible by the generous guidance and support of
+            <a href="http://alanruiz.net" target="_blank">Alan Ruiz</a>,
             <a href="http://www.recyclism.com" target="_blank">Benjamin Gaulon aka Recyclism</a>,
             <a href="http://www.bridgetorourke.com" target="_blank">Bridget O’Rourke</a>,
             <a href="http://csugrue.com" target="_blank">Chris Sugrue</a>,
@@ -355,15 +356,24 @@ ____||____
             <p class="bib">Williams, Glyn Brian. “The Ethnogenesis of the Crimean Tatars. An Historical Reinterpretation.” <em>Journal of the Royal Asiatic Society,</em> Third Series, Vol. 11, No. 3 (Nov. 2001), pp. 329-348.</p>
           </div>
         </li>
+
         <li>
-          <h4>2.3 More</h4>
+          <button class="collapsible" id="more">2.3 More</button>
+          <div class="content">
+            <!-- <p class="bib">Barringer, Felicity. “Tatars Stage a Noisy Protest in Moscow.” <em>The New York Times</em>, July 26, 1987. The New York Times with Index, ProQuest Historical Newspapers (pg. 3). Accessed on March 28, 2018.</p>
+            <p class="bib">Booz, Justin. (former Occupy Wall Street protester) in discussion with the author, November 2017. Paris, France.</p> -->
+            <button class="coor active" id="coor1">44°58'22.0"N 34°04'36.4"E</button>
+            <button class="coor" id="coor2">44°59'08.2"N 34°05'49.5"E</button>
+            <button class="coor" id="coor3">44°56'21.0"N 34°01'53.0"E</button>
+            <button class="coor" id="coor4">44°56'58.35"N 34°03'14.12"E</button>
+          </div> <!-- end More -->
         </li>
       </ul>
     </div>
 
     <div class="column image">
       <!-- images -->
-      <ul>
+      <ul class="image-list">
         <li><img class="lazy" src="imgs/low/1a.jpg" data-src="imgs/1a.jpg" data-srcset="imgs/1a.jpg" alt="protest field"></li>
         <li><img class="lazy" src="imgs/low/2a.jpg" data-src="imgs/2a.jpeg" data-srcset="imgs/2a.jpeg" alt="protest field"></li>
         <li><img class="lazy" src="imgs/low/3a.jpg" data-src="imgs/3a.png" data-srcset="imgs/3a.png" alt="protest field"></li>
@@ -388,6 +398,9 @@ ____||____
         <li><img class="lazy" src="imgs/low/20a.jpg" data-src="imgs/20a.png" data-srcset="imgs/20a.png" alt="protest field"></li>
         <li><img class="lazy" src="imgs/low/23a.jpg" data-src="imgs/23a.png" data-srcset="imgs/23a.png" alt="protest field"></li>
       </ul>
+
+      <!-- maps -->
+      <ul class="image-list" id="field-list"></ul>
 
       <!-- footnotes -->
       <div id="footnote-wrapper">
@@ -446,6 +459,9 @@ ____||____
 
   <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
   <script src="js/index.js"></script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdFXCEhdn_CBTndFjUoxJ9SZVKnbMIxwU&callback=initMap">
+  </script>
 </body>
 
 </html>

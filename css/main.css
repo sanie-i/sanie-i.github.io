@@ -313,6 +313,48 @@ ol {
   background: transparent;  /* optional: just make scrollbar invisible */
 }
 
+/* MAPS*/
+/* ------------------------------------------------------------------------------- */
+#field-list {
+  width: 100%;
+  height: 100%;
+  background-color: #cccccc;
+  display: none;
+}
+
+button.coor {
+  /* clear default */
+  text-decoration: none;
+  border: none;
+  outline: none;
+  margin: 0;
+  cursor: pointer;
+
+  /* add p styles */
+  font-family: Founders Regular, sans-serif;
+  font-weight: lighter;
+  font-size: 1.2em;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0;
+
+  position: relative;
+  top: 0;
+  background: #cccccc;
+  min-width: 20%;
+
+  z-index: 10;
+  display: block;
+}
+
+button.coor:first-child {
+  padding: 1em 0 0 0;
+}
+
+.coor.active::after {
+  content: "\2192";
+}
+
 /* FIGURES*/
 /* ------------------------------------------------------------------------------- */
 
@@ -425,6 +467,15 @@ ol {
   .content > p.bib:first-child {
     padding: 1em 0;
   }
+  
+/* MAPS */
+  #field-list {
+    height: 50vh;
+  }
+
+  button.coor:last-child {
+    padding: 0 0 1em 0;
+  }
 }
 
 /* ---------------------------------------------------------------------------------------------------- */
@@ -520,6 +571,15 @@ ol {
 
   .content > p.bib:first-child {
     padding: 1em 0;
+  }
+
+/* MAPS */
+  #field-list {
+    height: 50vh;
+  }
+
+  button.coor:last-child {
+    padding: 0 0 1em 0;
   }
 }
 

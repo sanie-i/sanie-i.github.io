@@ -1,6 +1,8 @@
 var x = window.matchMedia("(max-width: 900px)");
 var coll = document.getElementsByClassName("collapsible");
+var btns = document.getElementsByClassName("coor");
 var i;
+var uluru = {lat: 44.949559, lng: 34.027823};
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
@@ -106,3 +108,53 @@ document.addEventListener("DOMContentLoaded", function() {
     // Possibly fall back to a more compatible method here
   }
 });
+
+// maps
+// choose the coordinates to show
+$('#more').on('click', function() {
+  // Toggles between images and maps
+  $(".image-list").toggle();
+});
+
+$('#coor1').on('click', function() {
+  uluru = {lat: 44.949559, lng: 34.027823};
+  initMap();
+});
+
+$('#coor2').on('click', function() {
+  uluru = {lat: 44.985608, lng: 34.097079};
+  initMap();
+});
+
+$('#coor3').on('click', function() {
+  uluru = {lat: 44.939161, lng: 34.031396};
+  initMap();
+});
+
+$('#coor4').on('click', function() {
+  uluru = {lat: 44.949542, lng: 34.053922};
+  initMap();
+});
+
+// highlight chosen coordinates
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("coor active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+
+// Initialize and add the maps
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('field-list'), {
+    zoom: 16,
+    center: uluru,
+    mapTypeId: 'satellite',
+    disableDefaultUI: true
+    // mapTypeControl: true,
+    // mapTypeControlOptions: {
+    //   style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR
+    // }
+  });
+}
