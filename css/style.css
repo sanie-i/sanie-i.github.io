@@ -1,0 +1,230 @@
+@font-face { font-family: Lausanne; src: url('data/Lausanne-300.woff2');}
+@font-face { font-family: Founders Regular-Italic; font-style: italic; src: url('data/Lausanne-300Italic.woff2');}
+
+body {
+  font-family: Lausanne, sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  /* line-height: 1; */
+  background-color: #fff;
+  margin: 0;
+  overflow: auto;
+  color: #000000;
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  height: 100%;
+  margin:0;
+  padding:0;
+  font-size: 18px;
+}
+
+ul, li {
+  list-style-type: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  /* clear default */
+  text-decoration: none;
+  border: none;
+  outline: none;
+  margin: 0;
+  cursor: pointer;
+
+  /* add h1 styles */
+  font-family: Lausanne, sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1;
+  text-align: left;
+  padding: 0;
+  padding-bottom: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* sticky */
+  position: sticky;
+  top: 3em;
+  background: #fff;
+  background: linear-gradient(rgba(255,255,255,1), 95%, rgba(255,0,0,0));
+  min-width: 100%;
+
+  /* z-index: 10; */
+  display: block;
+  -webkit-transition: padding-bottom 0.5s ease-in-out;
+  transition: padding-bottom 0.5s ease-in-out;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Typography */
+p, h1, h2, h3, h4, h5, h6, a {
+  font-family: Lausanne, sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* line-height: 1; */
+}
+
+h1 {
+  white-space: pre-line;
+  font-size: 1em;
+  margin: 0;
+  line-height: 1;
+  /* position: sticky;
+  top: 0; */
+}
+
+p {
+  font-size: .47em;
+  max-width: 90%;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Landing Page */
+img.drag {
+  position: absolute;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Layout */
+.wrapper {
+  width: 100%;
+  height: 100%;
+  /* padding: 1em; */
+}
+
+/* holds the columns */
+.row {
+  display: flex;
+  height: 100%;
+}
+
+/* two equal columns next to each other */
+.column {
+  flex: 50%;
+  overflow-y: auto;
+}
+
+.text {
+  padding: 1em 0 1em 1em;
+}
+
+.title {
+  height: 4em;
+  width: calc(50% - 1em);
+  position: fixed;
+  top: 0;
+  padding-top: 1em;
+  padding-left: 1em;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.text > ul {
+  padding-top: 3em;
+}
+
+.image {
+  /* padding: 2em 2em 2em 0; */
+  /* padding: 0 2em 2em 0; */
+  /* margin-top: 2em; */
+}
+
+.image ul li img {
+  max-width: calc(100% - 1em);
+  min-width: 80%;
+  padding-bottom: 1em;
+  border: none;
+  outline: none;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: -webkit-filter 0.2s ease-out;
+  transition: -webkit-filter 0.2s ease-out;
+  transition: filter 0.2s ease-out;
+  transition: filter 0.2s ease-out, -webkit-filter 0.2s ease-out;
+}
+
+.image ul li img:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transition: -webkit-filter 0.2s ease-out;
+  transition: -webkit-filter 0.2s ease-out;
+  transition: filter 0.2s ease-out;
+  transition: filter 0.2s ease-out, -webkit-filter 0.2s ease-out;
+}
+
+.image ul li:first-child {
+  padding-top: 1em;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Collapsible */
+.content {
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+  max-height: 0;
+  will-change: max-height;
+  -webkit-transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
+}
+
+/* .content > p {
+  padding: 0 3em 1em 0;
+}
+
+.content > p:first-child {
+  padding: 1em 3em 1em 0;
+}
+
+.content > p.q {
+  padding: 0 3em 1em 1em;
+  hyphens: none;
+} */
+
+/* .active, .collapsible:hover {
+  color: #146200;
+} */
+
+.text::-webkit-scrollbar {
+  width: 0px;  /* remove scrollbar space */
+  background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Maps */
+
+button.coor {
+  font-size: .47em;
+  position: static;
+  line-height: 1.15;
+}
+
+#field-list {
+  width: 100%;
+  height: 100%;
+  background-color: #cccccc;
+  display: none;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Footnotes */
+  #footnote-wrapper li {
+    padding: 1em;
+  }
+
+  #footnote-wrapper {
+    background-color: #146200;
+    background-color: #008000;
+    /* background-color: #e3e3e3; */
+    width: 100%;
+  }
