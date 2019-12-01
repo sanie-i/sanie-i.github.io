@@ -4,19 +4,37 @@ var btns = document.getElementsByClassName("coor");
 var i;
 var uluru = {lat: 44.949559, lng: 34.027823};
 
+var full = document.getElementById("full");
+var grid = document.getElementById("grid");
+var imageList = document.getElementById("image-list");
+
+//collapsible text
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
+    var chapter = this.getElementsByTagName("span");
     if (content.style.maxHeight){
       content.style.maxHeight = null;
       this.style.paddingBottom = 0;
+      chapter[0].style.color = "#000";
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
-      this.style.paddingBottom = 0.5 + "em";
+      this.style.paddingBottom = 1 + "em";
+      chapter[0].style.color = "#bbb";
     }
   });
 }
+
+// //image list
+// full.addEventListener("click", function() {
+//   imageList.style.display = "block";
+// });
+//
+// grid.addEventListener("click", function() {
+//   imageList.style.display = "flex";
+//   // imageList.style.flexBasis = "flex";
+// });
 
 //footnotes
 var sup = document.getElementsByClassName("sup");

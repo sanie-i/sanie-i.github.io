@@ -32,6 +32,11 @@ ____||____
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link href="css/pace_minimal.css" rel="stylesheet" />
   <script src="js/jquery.min.js"></script>
+  <!-- <script
+    src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+    crossorigin="anonymous">
+  </script> -->
   <script src="js/pace.js"></script>
 
   <meta name="description" content="A Study of Placeholders investigates the practice of constructing Protest Fields in Crimea, Ukraine.">
@@ -63,18 +68,29 @@ ____||____
       <!-- Text -->
       <div class="title">
         <h1>Protest Fields:
-        A Study of Placeholders</h1>
+        <span class="grey">A study of placeholders</span></h1>
+        <!-- <button id="full">Full</button>
+        <button id="grid">Grid</button> -->
+
+        <div class="toggle-menu">
+          <button class="toggle" id="toggle-image">(image)</button>
+          <button class="toggle" id="toggle-text">(text)</button>
+        </div>
+
       </div>
+      <div class="flat-header"></div>
       <div class='column text'>
         <!-- Title -->
         <ul class="table-of-contents">
           <!-- Abstract -->
           <li>
-            <button class="collapsible">00 Abstract</button>
+            <button class="collapsible">00 <span>Abstract</span></button>
             <div class="content">
               <p>A plot of land divided into lots and populated with generic, repeating boxes is a familiar product of contemporary built space.
                 The landscape of Crimea, Ukraine is replete with such spaces – grass fields dotted with standardized stone dwellings arranged in
-                a rough but consistent grid. They are called protest fields. They result from a practice of unauthorized occupation of land in the
+                a rough but consistent grid. They are called protest fields.
+              </p>
+              <p>They result from a practice of unauthorized occupation of land in the
                 Crimean territory, as a reaction to historically consistent acts of violence and displacement. They are a form of resistance, a
                 practice of inscribing protest onto a landscape, a way of laying claim to a home and a homeland. This text investigates the strategy
                 of constructing protest fields as a subversive practice and as a plea for acceptance into the established order. By drawing
@@ -86,7 +102,7 @@ ____||____
           </li>
           <!-- Hut -->
           <li>
-            <button class="collapsible">01 The Hut</button>
+            <button class="collapsible">01 <span>The Hut</span></button>
             <div class="content">
               <p>
                 Little boxes on the hillside<br>
@@ -154,7 +170,7 @@ ____||____
           </li>
           <!-- Field -->
           <li>
-            <button class="collapsible">02 The Field</button>
+            <button class="collapsible">02 <span>The Field</span></button>
             <div class="content">
               <p>
               By comparing the Crimean tactic of protest fields to other methods of claiming space, we will discover
@@ -235,7 +251,7 @@ ____||____
           <!-- TODO: match image with text like below -->
           <!-- Territory -->
           <li>
-            <button class="collapsible">03 The Territory</button>
+            <button class="collapsible">03 <span>The Territory</span></button>
             <div class="content">
               <p>
               The fields’ formal and spatial configuration exhibits a strong bond to the prevailing organization of space.
@@ -361,7 +377,7 @@ ____||____
           </li> -->
 
           <li>
-            <button class="collapsible" id="more">06 More</button>
+            <button class="collapsible" id="more">04 <span>More</span></button>
             <div class="content">
               <button class="coor active" id="coor1">44°58'22.0"N 34°04'36.4"E</button>
               <button class="coor" id="coor2">44°59'08.2"N 34°05'49.5"E</button>
@@ -379,7 +395,7 @@ ____||____
 
       <!-- Images -->
       <div class='column image'>
-        <ul class="image-list">
+        <ul>
           <li><img class="lazy" src="imgs/low/1a.jpg" data-src="imgs/1a.jpg" data-srcset="imgs/1a.jpg" alt="protest field"></li>
           <li><img class="lazy" src="imgs/low/2a.jpg" data-src="imgs/2a.jpeg" data-srcset="imgs/2a.jpeg" alt="protest field"></li>
           <li><img class="lazy" src="imgs/low/3a.jpg" data-src="imgs/3a.png" data-srcset="imgs/3a.png" alt="protest field"></li>
@@ -415,6 +431,7 @@ ____||____
 
   <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
   <script src="js/index.js"></script>
+  <!-- <script src="js/landing.js"></script> -->
   <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdFXCEhdn_CBTndFjUoxJ9SZVKnbMIxwU&callback=initMap">
   </script>
