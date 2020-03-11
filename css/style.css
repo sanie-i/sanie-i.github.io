@@ -311,7 +311,7 @@ button.coor {
       background-color: #fff;
       position: fixed;
       top: 0;
-      height: 5em;
+      height: 4em;
       width: 100%;
       z-index: 5;
     }
