@@ -4,8 +4,18 @@ var btns = document.getElementsByClassName("coor");
 var i;
 var uluru = {lat: 44.949559, lng: 34.027823};
 
+var toggleImage = document.getElementById("toggle-image");
+var toggleText = document.getElementById("toggle-text");
+var columnImage = document.getElementsByClassName("image");
+var columnText = document.getElementsByClassName("text");
+var toggles = document.getElementsByClassName("toggle");
+var imageOn = true;
+var textOn = true;
+
 var titleDiv = document.getElementsByClassName("title");
 
+var full = document.getElementById("full");
+var grid = document.getElementById("grid");
 var imageList = document.getElementById("image-list");
 
 //collapsible text
@@ -25,6 +35,112 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+//text/image toggle
+function contentToggle() {
+  toggleImage.addEventListener("click", function() {
+    if (imageOn == true) {
+      imageOn = false;
+      toggleImage.style.color = "#bbb";
+      if (textOn == true){
+        console.log("image: " + imageOn, "text: " + textOn);
+        columnImage[0].style.flex = 0;
+        columnText[0].style.flex = "100%";
+        titleDiv[0].style.width = "calc(100% - 1em)";
+      } else if (textOn == false) {
+        columnImage[0].style.flex = 0;
+        columnText[0].style.flex = 0;
+      }
+    } else {
+      imageOn = true;
+      toggleImage.style.color = "#000";
+      if (textOn == true){
+        console.log("image: " + imageOn, "text: " + textOn);
+        columnImage[0].style.flex = "50%";
+        columnText[0].style.flex = "50%";
+        titleDiv[0].style.width = "calc(50% - 1em)";
+      } else if (textOn == false) {
+        columnImage[0].style.flex = "100%";
+        columnText[0].style.flex = 0;
+        titleDiv[0].style.width = "calc(100% - 1em)";
+      }
+    }
+    console.log("image: " + imageOn);
+  });
+
+  toggleText.addEventListener("click", function() {
+    if (textOn == true) {
+      textOn = false;
+      toggleText.style.color = "#bbb";
+      if (imageOn == true) {
+        console.log("image: " + imageOn, "text: " + textOn);
+        columnImage[0].style.flex = "100%";
+        columnText[0].style.flex = 0;
+        titleDiv[0].style.width = "calc(100% - 1em)";
+      } else if (imageOn == false) {
+        columnImage[0].style.flex = 0;
+        columnText[0].style.flex = 0;
+      }
+    } else {
+      textOn = true;
+      toggleText.style.color = "#000";
+      if (imageOn == true) {
+        console.log("image: " + imageOn, "text: " + textOn);
+        columnImage[0].style.flex = "50%";
+        columnText[0].style.flex = "50%";
+        titleDiv[0].style.width = "calc(50% - 1em)";
+      } else if (imageOn == false) {
+        columnImage[0].style.flex = 0;
+        columnText[0].style.flex = "100%";
+        titleDiv[0].style.width = "calc(100% - 1em)";
+      }
+    }
+
+    console.log("text: " + textOn);
+
+  });
+
+  for (var i = 0; i < toggles.length; i++) {
+    if (imageOn == true && textOn == true){
+      // columnImage[0].style.flex = "50%";
+      // columnText[0].style.flex = "50%";
+      // console.log("success!");
+    } else if (imageOn == true && textOn == false){
+      columnImage[0].style.flex = "100%";
+      columnText[0].style.flex = 0;
+      console.log(imageOn, textOn);
+      console.log("image on, text off");
+    } else if (imageOn == false && textOn == true){
+      // columnImage[0].style.flex = 0;
+      // columnText[0].style.flex = "100%";
+      // console.log(imageOn, textOn);
+    } else if (imageOn == false && textOn == false){
+      // columnImage[0].style.flex = 0;
+      // columnText[0].style.flex = 0;
+      // console.log(imageOn, textOn);
+    }
+  }
+}
+
+contentToggle();
+// columnImage[0].style.flex = 0;
+// columnText[0].style.flex = 0;
+
+
+// grid.addEventListener("click", function() {
+//   imageList.style.display = "flex";
+//   // imageList.style.flexBasis = "flex";
+// });
+
+// //image list
+// full.addEventListener("click", function() {
+//   imageList.style.display = "block";
+// });
+//
+// grid.addEventListener("click", function() {
+//   imageList.style.display = "flex";
+//   // imageList.style.flexBasis = "flex";
+// });
 
 //footnotes
 var sup = document.getElementsByClassName("sup");

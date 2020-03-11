@@ -5,6 +5,7 @@ body {
   font-family: Lausanne, sans-serif;
   font-weight: 300;
   font-size: 26px;
+  /* Change to 26px */
   /* line-height: 1; */
   background-color: #fff;
   margin: 0;
@@ -242,6 +243,7 @@ a.toggle {
 
 /* ------------------------------------------------------------------------------------ */
 /* Maps */
+
 button.coor {
   font-size: .7em;
   position: static;
@@ -304,7 +306,7 @@ button.coor {
     }
 
     .text > ul {
-      padding-top: 3em;
+      padding-top: 4em;
     }
 
     .flat-header {
@@ -326,7 +328,7 @@ button.coor {
     }
 
     button {
-      top: 4em;
+      top: 5em;
       z-index: 8;
     }
 
@@ -358,13 +360,11 @@ button.coor {
     }
 
     .image {
-      flex: 100%;
-      padding: 1em 1em 0 1em;
-      line-height: 0;
+
     }
 
     .image ul li img {
-      padding-bottom: 1em;
+      /* padding-bottom: 1em; */
     }
 
     .title {
