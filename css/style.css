@@ -95,6 +95,15 @@ p {
   max-width: 80%;
 }
 
+a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+}
+
 .content > p {
   hyphens: none;
   margin: 0;
